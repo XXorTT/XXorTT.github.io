@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+<title>md入门 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">XXTT&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">XXTT&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">md入门</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">John Doe</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">July 18, 2024&nbsp;&nbsp;3:23:04</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/blog1/">blog1</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="MarkDown学习笔记"><a href="#MarkDown学习笔记" class="headerlink" title="MarkDown学习笔记"></a>MarkDown学习笔记</h1><p>[TOC]</p>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h2><p>话说md的优秀学习资源还真不好找，在小破站找了半天，还是在Github发现了宝藏<br><strong><a target="_blank" rel="noopener" href="https://github.com/Sakiyary/Markdown-Typora-VSCode-Doc">https://github.com/Sakiyary/Markdown-Typora-VSCode-Doc</a></strong></p>
+<h2 id="1-标题-数个“-”-空格前置"><a href="#1-标题-数个“-”-空格前置" class="headerlink" title="1.标题[数个“#”+空格前置]"></a>1.标题[数个“#”+空格前置]</h2><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>标题会在目录与大纲分级显示，可以跳转。</p>
+<p>在 Typora 中建议开启严格模式，即不应为#标题，应为# 标题。</p>
+<p>应该手动补上空格，使得Markdown语法在其他文本编辑器上兼容。</p>
+<h2 id="2-强调-用-“-”-或-“-”-包围"><a href="#2-强调-用-“-”-或-“-”-包围" class="headerlink" title="2. 强调 [用 “**” 或 “__” 包围]"></a>2. 强调 [用 “**” 或 “__” 包围]</h2><p><strong>欢迎报考南京大学!</strong> (我喜欢用这种)<br><strong>欢迎报考南京大学!</strong><br>或者选中想要强调的文字按Ctrl+ B。</p>
+<p>例如</p>
+<p>欢迎报考南京大学！</p>
+<h2 id="3-斜体-用-“-”-或-“-”-包围"><a href="#3-斜体-用-“-”-或-“-”-包围" class="headerlink" title="3. 斜体 [用 “*” 或 “_” 包围]"></a>3. 斜体 [用 “*” 或 “_” 包围]</h2><p><em>欢迎大佬来浇浇我各种知识</em> (我喜欢用这种)<br><em>欢迎大佬来浇浇我各种知识</em><br>或者选中想要强调的文字按Ctrl+ I。</p>
+<p>例如</p>
+<p>欢迎大佬来浇我各种知识</p>
+<p>(PS斜体并强调[用“***”或“___”包围])</p>
+<h2 id="4-删除线-用-“-”-包围"><a href="#4-删除线-用-“-”-包围" class="headerlink" title="4. 删除线 [用 “~~” 包围]"></a>4. 删除线 [用 “~~” 包围]</h2><p><del>我宣布个事儿, 我是Sabiyary!</del><br>例如</p>
+<p>我宣布一件事情，我是Sabiyary！</p>
+<h2 id="5-高亮-用“-”包围"><a href="#5-高亮-用“-”包围" class="headerlink" title="5. *高亮 [用“&#x3D;&#x3D;”包围]"></a>5. *高亮 [用“&#x3D;&#x3D;”包围]</h2><p>(注意：此为扩展语法)</p>
+<p>&#x3D;&#x3D;我喜欢黄色, 也喜欢绿色&#x3D;&#x3D;<br>例如</p>
+<p>&#x3D;&#x3D;我喜欢黄色，也喜欢绿色&#x3D;&#x3D;</p>
+<h2 id="6-代码-用-“-”-包围"><a href="#6-代码-用-“-”-包围" class="headerlink" title="6. 代码 [用 “&#96;” 包围]"></a>6. 代码 [用 “&#96;” 包围]</h2><p><code>sudo rm -rf /*</code><br>例如</p>
+<p>sudo rm -rf &#x2F;*（没事别乱敲这个！）</p>
+<p>“请输入管理员密码: (点亮的指示灯)”</p>
+<h2 id="7-代码块-按三个“-”并敲回车"><a href="#7-代码块-按三个“-”并敲回车" class="headerlink" title="7. 代码块 [按三个“&#96;”并敲回车]"></a>7. 代码块 [按三个“&#96;”并敲回车]</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 这里就可以开始输入你要的代码了</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int mian() &#123;</span><br><span class="line">    print（“Hello, world!\n&quot;）;</span><br><span class="line">    retrun O;</span><br><span class="line">&#125;</span><br><span class="line"> // (这三个&quot;`&quot;文本编辑器会帮你自动补全 一般不用手动输)</span><br><span class="line">（我之前都是用这个来展示各种语法的，应该不用说明清楚吧）</span><br><span class="line">显示行数的话，一般要在 Typora 的设置里勾上这个显示行数的选项。</span><br><span class="line">代码块里可以选择语言，其会根据语言自动高亮各个语句。 </span><br><span class="line">在选择语言后，```会变为````+ 对应语言。</span><br></pre></td></tr></table></figure>
+<h2 id="8-引用-“-”-空格前置"><a href="#8-引用-“-”-空格前置" class="headerlink" title="8. 引用[“&gt;” + 空格前置]"></a>8. 引用[“&gt;” + 空格前置]</h2><blockquote>
+<p>24岁, 是学生.</p>
+<blockquote>
+<p>学生特有的无处不在(恼)<br>引用是可以的！</p>
+</blockquote>
+</blockquote>
+<h2 id="9-无序列表-“-“-或-“-”-空格前置"><a href="#9-无序列表-“-“-或-“-”-空格前置" class="headerlink" title="9. 无序列表 [“-“ 或 “+” + 空格前置]"></a>9. 无序列表 [“-“ 或 “+” + 空格前置]</h2><ul>
+<li>一颗是枣树 (我喜欢用这种)</li>
+</ul>
+<ul>
+<li>另一颗还是枣树</li>
+</ul>
+<ul>
+<li>(其实这种也可以, 不过由于在 Typora 中很难单个输入, 故不常用)<br>三个前置符都可以，敲回车会自动补全，可以在Typora设置中调整补全的符号，敲回车后按下Tab会缩进一级。</li>
+</ul>
+<h2 id="10-社区列表【数字-“-”-空格前置"><a href="#10-社区列表【数字-“-”-空格前置" class="headerlink" title="10.  社区列表【数字+“.” + 空格前置]"></a>10.  社区列表【数字+“.” + 空格前置]</h2><p>我来这里就为了三件事:</p>
+<ol>
+<li>公平</li>
+<li>公平</li>
+<li>还是tm的公平!<br>敲回车会自动补全，敲回车后按下Tab会缩进一级。</li>
+</ol>
+<h2 id="11-上标-用-“-”-包围"><a href="#11-上标-用-“-”-包围" class="headerlink" title="11.  *上标 [用 “^” 包围]"></a>11.  *上标 [用 “^” 包围]</h2><p>(注意：此为扩展语法)</p>
+<p>C语言中int的上限是 2^31^ - 1 &#x3D; 2147483647</p>
+<h2 id="12-下标-用-“-”-包围"><a href="#12-下标-用-“-”-包围" class="headerlink" title="12. *下标 [用 “~” 包围]"></a>12. *下标 [用 “~” 包围]</h2><p>(注意：此为扩展语法)</p>
+<p>H<del>2</del>O 是剧毒的!<br>例如</p>
+<p>H2哦是剧毒的！</p>
+<h2 id="13-注释-“-”-后置"><a href="#13-注释-“-”-后置" class="headerlink" title="13. *注释 [“[^]” 后置]"></a>13. *注释 [“[^]” 后置]</h2><p>(注意：此为扩展语法)</p>
+<blockquote>
+<p>今日我们相聚于此, 是为了学习 Markdown 的使用, 它的教程对于全体「观众」而言, 值得足足两个硬币的支持鼓励![^1]</p>
+</blockquote>
+<p>[^1]: 沃兹·基·硕德 改编自「公鸡」普契涅拉.<br>需要在文末写上注释的内容</p>
+<h2 id="14-链接-常用-“-”-“-”-分别包围文本与链接"><a href="#14-链接-常用-“-”-“-”-分别包围文本与链接" class="headerlink" title="14.  链接 [常用 “[ ]” + “( )” 分别包围文本与链接]"></a>14.  链接 [常用 “[ ]” + “( )” 分别包围文本与链接]</h2><p>（注意：文内动画作为扩展方式）</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Sakiyary">来看看原作者贫瘠的仓库罢</a><br>[基础教程: 12. 下标](#12. 下标 [用 “~” 包围])<br>支持网页链接与文内跳转，按住Ctrl并单击鼠标左键即可跳转。</p>
+<h2 id="15-任务列表-“-”-空格前置"><a href="#15-任务列表-“-”-空格前置" class="headerlink" title="15.任务列表[“-[]”+空格前置]"></a>15.任务列表[“-[]”+空格前置]</h2><p>TodoList:</p>
+<ul>
+<li><input disabled="" type="checkbox"> 刷B站</li>
+<li><input disabled="" type="checkbox"> 写代码</li>
+<li><input checked="" disabled="" type="checkbox"> 起床<br>使用x替换[ ]中的空格来勾选任务列表。 在 Typora&#x2F;VScode 中可以直接用鼠标左键单击复选框。</li>
+</ul>
+<h2 id="16-表格-用“-”-相似表格相似"><a href="#16-表格-用“-”-相似表格相似" class="headerlink" title="16.  表格 [用“|” 相似表格相似]"></a>16.  表格 [用“|” 相似表格相似]</h2><table>
+<thead>
+<tr>
+<th align="left">学号</th>
+<th align="center">姓名</th>
+<th align="right">年龄</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">114514</td>
+<td align="center">田所</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td align="left">1919810</td>
+<td align="center">浩三</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td align="left">(引号的位置代表着 左对齐, 居中, 右对齐)</td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">第一行为表头，并由第二行分割线决定景观方式与长度，第三行及之后即表格数据</td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+</tbody></table>
+<h2 id="17-图片-直接拖板进来或者复制粘贴"><a href="#17-图片-直接拖板进来或者复制粘贴" class="headerlink" title="17.  图片 [直接拖板进来或者复制粘贴]"></a>17.  图片 [直接拖板进来或者复制粘贴]</h2><p><img src="/%E5%9B%BE%E7%89%87%E7%9A%84%E4%BD%8D%E7%BD%AE" alt="图片"><br>我还是会选择拖板或者复制粘贴啦~在Typora的设置里也可以改变图片的存储方式。</p>
+<h2 id="18-分割线-按三个“-”或“-”或“-”并敲回车"><a href="#18-分割线-按三个“-”或“-”或“-”并敲回车" class="headerlink" title="18.分割线[按三个“*”或“-”或“_”并敲回车]"></a>18.分割线[按三个“*”或“-”或“_”并敲回车]</h2><hr>
+<p>— (我喜欢用这种)</p>
+<hr>
+<p>&#x2F;&#x2F; (其实按三个及以上都可以)<br>由于*与_均会自动补全，所以我觉得-极其方便。</p>
+<h2 id="19-Emoji表情-“-”-前面"><a href="#19-Emoji表情-“-”-前面" class="headerlink" title="19. Emoji表情 [“:” 前面]"></a>19. Emoji表情 [“:” 前面]</h2><p>（注意：英文输入为扩展语法）</p>
+<p>:sweat_smile:<br>:drooling_face:<br>:clown_face:<br>&#x2F;&#x2F; (敲回车或者鼠标点击, 后置的”:”一般不需要手动输)<br>这个功能的唯一要求就是英语水平要高，或者大概记住各个表情符号的英文名字。</p>
+<p>对于其余普通的 Markdown 文本编辑器，可以直接将 Emoji 表情复制进来，这就是直接硬编码的 (刻进DNA里）</p>
+<p>例如</p>
+<p>😅🤤🤡</p>
+<p>使用好这个功能可以让你的文本非常可爱！太抽象了</p>
+<h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><h2 id="1-目录-自动生成"><a href="#1-目录-自动生成" class="headerlink" title="1. 目录 [自动生成]"></a>1. 目录 [自动生成]</h2><p>&#x3D;&#x3D;[TOC]&#x3D;&#x3D;<br>(此为 Typora 特有的, 如本文档开头)<br>若使用 VS Code 且搭配 Markdown All in One 扩展，可在 VS Code 的命令面板（即VS Code Command Palette）输入Create Table of Contents自动生成目录，可在扩展中设置中细调目录参数。</p>
+<h2 id="2-内联-HTML-代码-用-“-”-包围"><a href="#2-内联-HTML-代码-用-“-”-包围" class="headerlink" title="2. 内联 HTML 代码 [用 “&lt;&gt; &lt;&#x2F;&gt;” 包围]"></a>2. 内联 HTML 代码 [用 “&lt;&gt; &lt;&#x2F;&gt;” 包围]</h2><div style="text-align:center">
+  <font style="color:red">我不会 HTML 呜呜呜... 浇浇我</font>
+</div>
+
+<center>简单的文字居中也可以这样</center>
+
+<p><u>我差点忘了还有下划线这东西…</u><br>只要你会写，你完全可以把 Markdown 当作HTML来写。</p>
+<p>同时，.md文件可以直接导出成一个网页。</p>
+<p>下划线可以选中想要下划的文字单击Ctrl+ U。</p>
+<h2 id="3-内联"><a href="#3-内联" class="headerlink" title="3. 内联"></a>3. 内联</h2><p>公式 [用 “$” 包围]<br>（注意：部分编译器会不识别部分符号）</p>
+<p>$\LaTeX$ 是最好用的论文排版语言! 不信你看!</p>
+<p>$a^n+b^n&#x3D;c^n$</p>
+<p>$$<br>%\usepackage{unicode-math}<br>\displaystyle \ointctrclockwise\mathcal{D}[x(t)]<br>\sqrt{\frac{\displaystyle3\uppi^2-\sum_{q&#x3D;0}^{\infty}(z+\hat L)^{q}<br>\exp(\symrm{i}q^2 \hbar x)}{\displaystyle (\symsfup{Tr}\symbfcal{A})<br>\left(\symbf\Lambda_{j_1j_2}^{i_1i_2}\Gamma_{i_1i_2}^{j_1j_2}<br>\hookrightarrow\vec D\cdot \symbf P \right)}}<br>&#x3D;\underbrace{\widetilde{\left\langle \frac{\notin \emptyset}<br>{\varpi\alpha_{k\uparrow}}\middle\vert<br>\frac{\partial_\mu T_{\mu\nu}}{2}\right\rangle}}_{\mathrm{K}_3<br>\mathrm{Fe}(\mathrm{CN})_6} ,\forall z \in \mathbb{R}<br>$$<br>使用$包围为单条公式，点击两个$并敲回车即生成公式块。</p>
+<p>例如</p>
+<p>是最好用的论文排版语言！ 不信你看！</p>
+<h2 id="4-网络图表"><a href="#4-网络图表" class="headerlink" title="4. *网络图表"></a>4. *网络图表</h2><p>（这是学长给我的网络图床教程，我实践过……）</p>
+<p>分享一个Typora搭配腾讯云COS&#x2F;阿里云OSS图床的例子。 新免费用户投入了6个月的时间，另外选择了七牛云或者路过图床。</p>
+<h2 id="5-Typora-的常用快捷键"><a href="#5-Typora-的常用快捷键" class="headerlink" title="5. *Typora 的常用快捷键"></a>5. *Typora 的常用快捷键</h2><p>關鍵	效果	關鍵	效果<br>Ctrl+D	选中当前词	Ctrl+L	选中当前句&#x2F;行<br>Ctrl+E	选中当前项目	Ctrl+F	搜索当前问题<br>Ctrl+B	加粗当前检查	Ctrl+H	替换当前选项<br>Ctrl+I	总统当前任务	Ctrl+U	下划当前检查<br>Ctrl+K	将当前选中生成链接	Ctrl+J	屏幕滚动至顶部<br>Ctrl+W	关闭窗口	Ctrl+N	打开新窗口<br>Ctrl+O	打开文件	Ctrl+P	搜索结果并打开<br>Ctrl+回车	表格下方插入行	Ctrl+,	展开方案<br>Ctrl+.	切换全角&#x2F;半角标点	Ctrl+&#x2F;	切换正常&#x2F;来源视图<br>Ctrl+ Shift+-	幻灯片	Ctrl+ Shift++	放大<br>还有一些不常用的&#x2F;三键的主板不在此首发。</p>
+<h2 id="6-Typora的主题风格与检查元素"><a href="#6-Typora的主题风格与检查元素" class="headerlink" title="6. *Typora的主题风格与检查元素"></a>6. *Typora的主题风格与检查元素</h2><p>Markdown 在编译后相当于 HTML。 而Typora的正常视图就是编译Markdown后的，故Typora的主题样式本质上就是CSS文件。</p>
+<p>可以下载各种好看的主题给Typora换上，同时也可以自己调整对应的CSS文件，或者自己手搓。</p>
+<p>在Typora中打开调试模式后即可在正常视图右击打开检查元素，在其中就可以完全将Markdown文件当成HTML来编辑。</p>
+<h1 id="💯-总结"><a href="#💯-总结" class="headerlink" title="💯 总结"></a>💯 总结</h1><p>至此，Markdown + Typora &#x2F; VSCode的手册教程也告一段落。</p>
+<p>不知道你看完这么长的教程&#x2F;手册，是否能体会到 Markdown 的精妙简洁之处呢？</p>
+<p>其实 Markdown 只是标记语言的最开始，我的感受是会了 Markdown 之后对于理解 HTML 也有帮助，对于使用Latex<br>来写论文也有帮助。 语言标记是为了修复Word那样虽然“所见即所得”，但又过度花哨浮华，很差的兼容性与闭源的编码的缺陷。 当你能够掌握这样的“所写即所得”时，你肯定会常用 Markdown 这类语言来处理文本的妙处！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>John Doe</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://example.com/2024/07/18/md%E5%85%A5%E9%97%A8/">http://example.com/2024/07/18/md%E5%85%A5%E9%97%A8/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Test/"># Test</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/07/18/hello-world/">Hello World</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© John Doe | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
