@@ -17,24 +17,28 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>Hello World - Bi8bo!!!</title>
+  <title>Maven - Bi8bo!!!</title>
 
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="[TOC] 1.Maven简介&#x3D;&#x3D;Maven是一个依赖管理工具&#x3D;&#x3D;Maven是一款为 Java 项目管理构建、依赖管理的工具（软件），使用 Maven 可以自动化构建、测试、打包和发布项目，大大提高了开发效率和质量。Maven就是一个软件，掌握安装、配置、以及基本功能 （项目构建、依赖管理） 的理解和使用即可~ 2.Maven的引入①jar包：&emsp;&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://xxxtt.site/2024/07/18/hello-world/index.html">
+<meta property="og:title" content="Maven">
+<meta property="og:url" content="https://xxxtt.site/2024/08/02/maven/index.html">
 <meta property="og:site_name" content="Bi8bo!!!">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="[TOC] 1.Maven简介&#x3D;&#x3D;Maven是一个依赖管理工具&#x3D;&#x3D;Maven是一款为 Java 项目管理构建、依赖管理的工具（软件），使用 Maven 可以自动化构建、测试、打包和发布项目，大大提高了开发效率和质量。Maven就是一个软件，掌握安装、配置、以及基本功能 （项目构建、依赖管理） 的理解和使用即可~ 2.Maven的引入①jar包：&emsp;&amp;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-07-17T17:41:30.012Z">
-<meta property="article:modified_time" content="2024-07-17T17:41:30.012Z">
+<meta property="og:image" content="https://xxxtt.site/jar.png">
+<meta property="og:image" content="https://xxxtt.site/dependency.png">
+<meta property="article:published_time" content="2024-08-02T03:29:50.469Z">
+<meta property="article:modified_time" content="2024-08-02T05:51:28.382Z">
 <meta property="article:author" content="bi8bo">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xxxtt.site/jar.png">
   
   
   
-  
+  <meta name="keywords" content="Java">
 
   <!-- feed -->
   
@@ -75,35 +79,90 @@
 <div class="article banner top">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-07-17T17:41:30.012Z">2024-07-18</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2024-07-17T17:41:30.012Z">2024-07-18</time></span></div></div></div>
+<span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Java/">Java</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-08-02T03:29:50.469Z">2024-08-02</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2024-08-02T05:51:28.382Z">2024-08-02</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>Hello World</span></h1>
+        <h1 class="text title"><span>Maven</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+  </div><article class="md-text content"><p>[TOC]</p>
+<h2 id="1-Maven简介"><a href="#1-Maven简介" class="headerlink" title="1.Maven简介"></a>1.Maven简介</h2><p>&#x3D;&#x3D;Maven是一个依赖管理工具&#x3D;&#x3D;<br>Maven是一款为 Java 项目管理构建、依赖管理的工具（软件），使用 Maven 可以自动化构建、测试、打包和发布项目，大大提高了开发效率和质量。<br>Maven就是一个软件，掌握安装、配置、以及基本功能 <strong>（项目构建、依赖管理）</strong> 的理解和使用即可~</p>
+<h2 id="2-Maven的引入"><a href="#2-Maven的引入" class="headerlink" title="2.Maven的引入"></a>2.Maven的引入</h2><h6 id="①jar包："><a href="#①jar包：" class="headerlink" title="①jar包："></a>①jar包：</h6><p>&emsp;&emsp;jar包就是 &#x3D;&#x3D;Java Archive File&#x3D;&#x3D;，是 Java 的一种文档格式，是一种与平台无关的文件格式，可将多个文件合成一个“文件”。jar 包与 zip 包非常相似——准确地说，它就是 zip 包，所以叫它文件包。<br>&emsp;&emsp;jar 与 zip 唯一的区别就是在 jar 文件的内容中，包含了一个 META-INF&#x2F;MANIFEST.MF 文件，该文件是在生成 jar 文件的时候自动创建的，作为jar里面的”详情单”，包含了该Jar包的版本、创建人和类搜索路径Class-Path等信息。<br>&emsp;&emsp;随着我们使用越来越多的框架，或者框架封装程度越来越高，项目中使用的jar包也越来越多。项目中，一个模块里面用到上百个jar包是非常正常的。如果一个简单的项目就需要上百个文件导入后才能运行这无疑让人感到头大。这时就需要一个工具来管理……</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font face="黑体"><del>懒惰使人类进步</del></font></p>
+<p>&emsp;&emsp;如果使用 Maven 来引入这些 jar 包只需要配置几个『<strong>依赖</strong>』</p>
+<h6 id="②jar包的来源问题"><a href="#②jar包的来源问题" class="headerlink" title="②jar包的来源问题"></a>②jar包的来源问题</h6><ul>
+<li>这个jar包所属技术的官网。官网通常是英文界面，网站的结构又不尽相同，甚至找到下载链接还发现需要通过特殊的工具下载。</li>
+<li>第三方网站提供下载。问题是不规范，在使用过程中会出现各种问题。<ul>
+<li>jar包的名称</li>
+<li>jar包的版本</li>
+<li>jar包内的具体细节</li>
+</ul>
+</li>
+<li>而使用 Maven 后，依赖对应的 jar 包能够<strong>自动下载</strong>，方便、快捷又规范。</li>
+</ul>
+<h6 id="③jar包的导入问题"><a href="#③jar包的导入问题" class="headerlink" title="③jar包的导入问题"></a>③jar包的导入问题</h6><p>在web工程中，jar包必须存放在指定位置：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/jar.png" alt="alt text"></p>
+<p>在使用Maven之后，通过配置依赖(jar包)的坐标，查找本地仓库中相应jar包，若本地仓库没有，则统一从镜像网站或中央仓库中下载：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/dependency.png" alt="alt text"></p>
+<h6 id="④jar包之间的依赖"><a href="#④jar包之间的依赖" class="headerlink" title="④jar包之间的依赖"></a>④jar包之间的依赖</h6><p>&emsp;&emsp;框架中使用的 jar 包，不仅数量庞大，而且彼此之间存在错综复杂的依赖关系。依赖关系的复杂程度，已经上升到了完全不能靠人力手动解决的程度。另外，jar 包之间有可能产生冲突。进一步增加了我们在 jar 包使用过程中的难度。<br>&emsp;&emsp;而实际上 jar 包之间的依赖关系是普遍存在的，如果要由程序员手动梳理无疑会增加极高的学习成本，而这些工作又对实现业务功能毫无帮助。<br>&emsp;&emsp;而使用 Maven 则几乎不需要管理这些关系，极个别的地方调整一下即可，极大的减轻了我们的工作量。</p>
+<h2 id="3-基于IDEA-进行Maven依赖管理"><a href="#3-基于IDEA-进行Maven依赖管理" class="headerlink" title="3.基于IDEA 进行Maven依赖管理"></a>3.基于IDEA 进行Maven依赖管理</h2><h5 id="3-1-依赖管理概念"><a href="#3-1-依赖管理概念" class="headerlink" title="3.1 依赖管理概念"></a>3.1 依赖管理概念</h5><p>Maven 依赖管理是 Maven 软件中最重要的功能之一。Maven 的依赖管理能够帮助开发人员自动解决软件包依赖问题，使得开发人员能够轻松地将其他开发人员开发的模块或第三方框架集成到自己的应用程序或模块中，避免出现版本冲突和依赖缺失等问题。</p>
+<p>我们通过定义 POM 文件，Maven 能够自动解析项目的依赖关系，并通过 Maven <strong>仓库自动</strong>下载和管理依赖，从而避免了手动下载和管理依赖的繁琐工作和可能引发的版本冲突问题。</p>
+<p>总之，Maven 的依赖管理是 Maven 软件的一个核心功能之一，使得软件包依赖的管理和使用更加智能和方便，简化了开发过程中的工作，并提高了软件质量和可维护性。</p>
+<h5 id="3-2-Maven工程核心信息配置和解读（GAVP）"><a href="#3-2-Maven工程核心信息配置和解读（GAVP）" class="headerlink" title="3.2 Maven工程核心信息配置和解读（GAVP）"></a>3.2 Maven工程核心信息配置和解读（GAVP）</h5><p>位置：pom.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 模型版本 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 公司或者组织的唯一标志，并且配置时生成的路径也是由此生成， 如com.companyname.project-group，maven会将该项目打成的jar包放本地路径：/com/companyname/project-group --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.companyname.project-group<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 项目的唯一ID，一个groupId下面可能多个项目，就是靠artifactId来区分的 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>project<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 版本号 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--打包方式</span></span><br><span class="line"><span class="comment">    默认：jar</span></span><br><span class="line"><span class="comment">    jar指的是普通的java项目打包方式！ 项目打成jar包！</span></span><br><span class="line"><span class="comment">    war指的是web项目打包方式！项目打成war包！</span></span><br><span class="line"><span class="comment">    pom不会讲项目打包！这个项目作为父工程，被其他工程聚合或者继承！后面会讲解两个概念</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar/pom/war<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h5 id="3-3-Maven工程依赖管理配置"><a href="#3-3-Maven工程依赖管理配置" class="headerlink" title="3.3 Maven工程依赖管理配置"></a>3.3 Maven工程依赖管理配置</h5><p>位置：pom.xml</p>
+<p>依赖管理和依赖添加</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">   通过编写依赖jar包的gav必要属性，引入第三方依赖！</span></span><br><span class="line"><span class="comment">   scope属性是可选的，可以指定依赖生效范围！</span></span><br><span class="line"><span class="comment">   依赖信息查询方式：</span></span><br><span class="line"><span class="comment">      1. maven仓库信息官网 https://mvnrepository.com/</span></span><br><span class="line"><span class="comment">      2. mavensearch插件搜索</span></span><br><span class="line"><span class="comment"> --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 引入具体的依赖包 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 依赖范围 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>依赖版本统一提取和维护</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--声明版本--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--命名随便,内部制定版本号即可！--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">junit.version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">junit.version</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 也可以通过 maven规定的固定的key，配置maven的参数！如下配置编码格式！--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--引用properties声明版本 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;junit.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h5 id="3-4-依赖范围"><a href="#3-4-依赖范围" class="headerlink" title="3.4 依赖范围"></a>3.4 依赖范围</h5><p>通过设置坐标的依赖范围(scope)，可以设置 对应jar包的作用范围：编译环境、测试环境、运行环境</p>
+<table>
+<thead>
+<tr>
+<th>依赖范围</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>compile</strong></td>
+<td>编译依赖范围，scope 元素的缺省值。使用此依赖范围的 Maven 依赖，对于三种 classpath 均有效，即该 Maven 依赖在上述三种 classpath 均会被引入。例如，log4j 在编译、测试、运行过程都是必须的。</td>
+</tr>
+<tr>
+<td><strong>test</strong></td>
+<td>测试依赖范围。使用此依赖范围的 Maven 依赖，只对测试 classpath 有效。例如，Junit 依赖只有在测试阶段才需要。</td>
+</tr>
+<tr>
+<td><strong>provided</strong></td>
+<td>已提供依赖范围。使用此依赖范围的 Maven 依赖，只对编译 classpath 和测试 classpath 有效。例如，servlet-api 依赖对于编译、测试阶段而言是需要的，但是运行阶段，由于外部容器已经提供，故不需要 Maven 重复引入该依赖。</td>
+</tr>
+<tr>
+<td>runtime</td>
+<td>运行时依赖范围。使用此依赖范围的 Maven 依赖，只对测试 classpath、运行 classpath 有效。例如，JDBC 驱动实现依赖，其在编译时只需 JDK 提供的 JDBC 接口即可，只有测试、运行阶段才需要实现了 JDBC 接口的驱动。</td>
+</tr>
+<tr>
+<td>system</td>
+<td>系统依赖范围，其效果与 provided 的依赖范围一致。其用于添加非 Maven 仓库的本地依赖，通过依赖元素 dependency 中的 systemPath 元素指定本地依赖的路径。鉴于使用其会导致项目的可移植性降低，一般不推荐使用。</td>
+</tr>
+<tr>
+<td>import</td>
+<td>导入依赖范围，该依赖范围只能与 dependencyManagement 元素配合使用，其功能是将目标 pom.xml 文件中 dependencyManagement 的配置导入合并到当前 pom.xml 的 dependencyManagement 中。</td>
+</tr>
+</tbody></table>
+<hr>
+<p>本篇知识回顾参考<a target="_blank" rel="noopener" href="http://www.atguigu.com/">尚硅谷</a>的文章，仅作为复习<font color=‘blue’>or</font>快速入门使用。</p>
 
 
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">Newer</div><a href="/2024/07/18/md%E5%85%A5%E9%97%A8/">md入门</a></div><div class="item" id="next"></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">Older</div><a href="/2024/07/18/md%E5%85%A5%E9%97%A8/">md入门</a></div></section></div>
 
 
 
@@ -117,7 +176,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">On This Page</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">On This Page</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Maven%E7%AE%80%E4%BB%8B"><span class="toc-text">1.Maven简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Maven%E7%9A%84%E5%BC%95%E5%85%A5"><span class="toc-text">2.Maven的引入</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E2%91%A0jar%E5%8C%85%EF%BC%9A"><span class="toc-text">①jar包：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E2%91%A1jar%E5%8C%85%E7%9A%84%E6%9D%A5%E6%BA%90%E9%97%AE%E9%A2%98"><span class="toc-text">②jar包的来源问题</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E2%91%A2jar%E5%8C%85%E7%9A%84%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98"><span class="toc-text">③jar包的导入问题</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E2%91%A3jar%E5%8C%85%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BE%9D%E8%B5%96"><span class="toc-text">④jar包之间的依赖</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%9F%BA%E4%BA%8EIDEA-%E8%BF%9B%E8%A1%8CMaven%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86"><span class="toc-text">3.基于IDEA 进行Maven依赖管理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86%E6%A6%82%E5%BF%B5"><span class="toc-text">3.1 依赖管理概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-Maven%E5%B7%A5%E7%A8%8B%E6%A0%B8%E5%BF%83%E4%BF%A1%E6%81%AF%E9%85%8D%E7%BD%AE%E5%92%8C%E8%A7%A3%E8%AF%BB%EF%BC%88GAVP%EF%BC%89"><span class="toc-text">3.2 Maven工程核心信息配置和解读（GAVP）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-Maven%E5%B7%A5%E7%A8%8B%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86%E9%85%8D%E7%BD%AE"><span class="toc-text">3.3 Maven工程依赖管理配置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-%E4%BE%9D%E8%B5%96%E8%8C%83%E5%9B%B4"><span class="toc-text">3.4 依赖范围</span></a></li></ol></li></ol></li></ol></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>Scroll to Top</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
