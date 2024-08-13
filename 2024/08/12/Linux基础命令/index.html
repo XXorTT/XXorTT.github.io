@@ -17,19 +17,19 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>Linux - Bi8bo!!!</title>
+  <title>Linux基础命令 - Bi8bo!!!</title>
 
   
-    <meta name="description" content="Linux基础命令[Toc] Linux目录结构  &#x2F;根目录，是最顶级的目录 Linux有且仅有这一个顶级目录，没有Windows那些分盘分区 Linux中路径描述分区也用 &#x2F; 来区分 &#x2F;home&#x2F;bob 表示根目录下的home的bob文件夹里的内容  ls命令功能：列出文件夹信息语法：ls [-l -h -a] [参数]  参数：被查看的文件夹，不提供参数，表示查看当前工作目">
+    <meta name="description" content="Linux基础命令 Linux目录结构  &#x2F;根目录，是最顶级的目录 Linux有且仅有这一个顶级目录，没有Windows那些分盘分区 Linux中路径描述分区也用 &#x2F; 来区分 &#x2F;home&#x2F;bob 表示根目录下的home的bob文件夹里的内容  ls命令功能：列出文件夹信息语法：ls [-l -h -a] [参数]  参数：被查看的文件夹，不提供参数，表示查看当前工作目录 -l，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux">
+<meta property="og:title" content="Linux基础命令">
 <meta property="og:url" content="https://xxttt.site/2024/08/12/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Bi8bo!!!">
-<meta property="og:description" content="Linux基础命令[Toc] Linux目录结构  &#x2F;根目录，是最顶级的目录 Linux有且仅有这一个顶级目录，没有Windows那些分盘分区 Linux中路径描述分区也用 &#x2F; 来区分 &#x2F;home&#x2F;bob 表示根目录下的home的bob文件夹里的内容  ls命令功能：列出文件夹信息语法：ls [-l -h -a] [参数]  参数：被查看的文件夹，不提供参数，表示查看当前工作目">
+<meta property="og:description" content="Linux基础命令 Linux目录结构  &#x2F;根目录，是最顶级的目录 Linux有且仅有这一个顶级目录，没有Windows那些分盘分区 Linux中路径描述分区也用 &#x2F; 来区分 &#x2F;home&#x2F;bob 表示根目录下的home的bob文件夹里的内容  ls命令功能：列出文件夹信息语法：ls [-l -h -a] [参数]  参数：被查看的文件夹，不提供参数，表示查看当前工作目录 -l，">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xxttt.site/image.png">
 <meta property="article:published_time" content="2024-08-12T15:05:19.680Z">
-<meta property="article:modified_time" content="2024-08-12T16:03:51.906Z">
+<meta property="article:modified_time" content="2024-08-13T07:22:48.241Z">
 <meta property="article:author" content="bi8bo">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -66,7 +66,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/07/18/md%E5%85%A5%E9%97%A8/"><span class="title">md入门</span></a><a class="item title" href="/2024/08/12/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"><span class="title">Linux</span></a><a class="item title" href="/2024/08/02/maven/"><span class="title">Maven</span></a><a class="item title" href="/2024/07/18/hello-world/"><span class="title">Hello World</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/12/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"><span class="title">Linux基础命令</span></a><a class="item title" href="/2024/07/18/md%E5%85%A5%E9%97%A8/"><span class="title">md入门</span></a><a class="item title" href="/2024/08/02/maven/"><span class="title">Maven</span></a><a class="item title" href="/2024/07/18/hello-world/"><span class="title">Hello World</span></a></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/XXorTT" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/></a><a class="social" onclick="switchTheme()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" fill-rule="evenodd" d="M582.4 326.4c-140.8 0-256 115.2-256 256s115.2 256 256 256 256-115.2 256-256-115.2-256-256-256z m0 448c-70.4 0-131.2-36.8-164.8-92.8 12.8 3.2 27.2 4.8 40 4.8 121.6 0 219.2-99.2 219.2-219.2 0-17.6-1.6-35.2-6.4-52.8 60.8 32 102.4 96 102.4 169.6 1.6 104-84.8 190.4-190.4 190.4zM582.4 262.4c17.6 0 32-14.4 32-32v-128c0-17.6-14.4-32-32-32s-32 14.4-32 32v128c0 17.6 14.4 32 32 32zM262.4 582.4c0-17.6-14.4-32-32-32h-128c-17.6 0-32 14.4-32 32s14.4 32 32 32h128c17.6 0 32-14.4 32-32zM310.4 356.8c6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6 12.8-12.8 12.8-32 0-44.8l-91.2-91.2c-12.8-12.8-32-12.8-44.8 0-12.8 12.8-12.8 32 0 44.8l91.2 91.2zM944 220.8c-12.8-12.8-32-12.8-44.8 0l-91.2 91.2c-12.8 12.8-12.8 32 0 44.8 6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6l91.2-91.2c12.8-12.8 12.8-33.6 0-44.8zM310.4 808l-91.2 91.2c-12.8 12.8-12.8 32 0 44.8 6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6l91.2-91.2c12.8-12.8 12.8-32 0-44.8-11.2-11.2-32-11.2-44.8 0z"></path></svg></a></div></footer>
 </div></aside><div class="l_main" id="main">
@@ -78,19 +78,19 @@
 <div class="article banner top">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Java/">Java</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-12T15:05:19.680Z">2024-08-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-12T16:03:51.906Z">2024-08-13</time></span></div></div></div>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%B3%BB%E7%BB%9F/">系统</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-12T15:05:19.680Z">2024-08-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-13T07:22:48.241Z">2024-08-13</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>Linux</span></h1>
+        <h1 class="text title"><span>Linux基础命令</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><h1 id="Linux基础命令"><a href="#Linux基础命令" class="headerlink" title="Linux基础命令"></a>Linux基础命令</h1><p>[Toc]</p>
+  </div><article class="md-text content"><h1 id="Linux基础命令"><a href="#Linux基础命令" class="headerlink" title="Linux基础命令"></a>Linux基础命令</h1><!-- [Toc] -->
 <h2 id="Linux目录结构"><a href="#Linux目录结构" class="headerlink" title="Linux目录结构"></a>Linux目录结构</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image.png" alt="alt text"></p>
 <ul>
 <li><code>/</code>根目录，是最顶级的目录</li>
